@@ -32,7 +32,7 @@ class App extends Component {
         </header>
         <div className='Year'>
           { this.months.map((m, i) => 
-              <Month name={m} index={i} year={2018} />
+              <Month key={m} name={m} index={i} year={2018} />
             )
           }
         </div>
