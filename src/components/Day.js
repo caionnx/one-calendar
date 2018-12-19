@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import dateFormat from 'date-fns/format';
 import isToday from 'date-fns/is_today';
+import { connect } from 'react-redux'
+import { addEvent, removeEvent } from '../actions'
 import DayEvent from './DayEvent';
+
+const getUID = ({ numeric, month, year } = {}) =>
+  `${numeric}${month}${year}`;
 
 class Day extends Component {
   constructor () {
@@ -34,8 +39,9 @@ class Day extends Component {
 
   // Define class name and modifiers e.g. Weekend, Current, Holiday etc.
   getClassName (isVisible) {
+    const { event } = this.props;
     const current = this.isToday() ? ' Day--current' : '';
-    const highlighted = this.state.event ? ` Day--${this.state.event.id}` : '';
+    const highlighted = event ? ` Day--${event.id}` : '';
     const weekend = this.isWeekend() ? ' Day--weekend' : '';
     const visibility = !isVisible ? ' Day--hidden' : '';
 
@@ -51,27 +57,42 @@ class Day extends Component {
 
   isWeekend () {
     const { dayIndex } = this.props;
+
     return dayIndex === 0 || dayIndex === 6;
   }
 
-  onRemoveEvent (id) {
-    this.setState({ event: false })
+  onRemoveEvent () {
+    const dateUID = getUID(this.props);
+
+    this.props.dispatch(removeEvent(dateUID));
   }
 
   onAddEvent (ev, category) {
     ev.preventDefault();
-    this.setState({ event: category })
+    const { id, name } = category;
+    const dateUID = getUID(this.props);
+
+    if (!id || !name) {
+      return;
+    }
+
+    this.props.dispatch(addEvent(id, name, dateUID));
   }
 
   render () {
-    const { numeric } = this.props;
-    const { eventModal, event, fullDate } = this.state;
+    const { numeric, event } = this.props;
+    const { eventModal, fullDate } = this.state;
     
     return (
-      <td className={this.getClassName(numeric >= 1)}>
+      <td>
         {numeric >= 1 ?
           [
-            <div key={numeric} onClick={this.openEventModal}>{ numeric }</div>,
+            <div
+              key={numeric}
+              className={this.getClassName(numeric >= 1)}
+              onClick={this.openEventModal}>
+              { numeric }
+            </div>,
             eventModal &&
             <DayEvent
               key={fullDate}
@@ -89,4 +110,8 @@ class Day extends Component {
   }
 }
 
-export default Day;
+const mapStateToProps = (state, props) => ({
+  event: state.find(ev => ev.date === getUID(props))
+});
+
+export default connect(mapStateToProps)(Day);
