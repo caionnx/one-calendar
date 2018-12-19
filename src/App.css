@@ -14,7 +14,27 @@
   min-height: 10vh;
 }
 
-.Year {
+.Year__Header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5em;
+}
+
+.Year__Header h1 {
+  margin: 0 .5em;
+}
+
+.Year__Header button {
+  border: 0;
+  background-color: white;
+  outline: none;
+  font-weight: bold;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.Year__Content {
   align-items: flex-start;
   align-items: stretch;
   display: flex;
