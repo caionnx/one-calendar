@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import calendarMatrix from 'calendar-matrix';
-import isToday from 'date-fns/is_today';
 import WeekHead from './WeekHead';
 import Day from './Day';
 
@@ -9,21 +8,11 @@ class Month extends Component {
     return calendarMatrix(year, month)
   }
 
-  isToday (year, month, day) {
-    const dirtyFormat = `${year}-${month + 1}-${day}`;
-
-    return isToday(dirtyFormat);
-  }
-
-  isWeekend (dayIndex) {
-    return dayIndex === 0 || dayIndex === 6;
-  }
-
   render () {
     const {
       name,
       year,
-      index,
+      index: monthIndex,
     } = this.props;
 
     return (
@@ -37,15 +26,17 @@ class Month extends Component {
         <tbody>
           {
             // Get a matrix for the month, each line is a week
-            this.getMatrixOfDays(year, index).map(row => 
-              <tr>
+            this.getMatrixOfDays(year, monthIndex).map((row, week) => 
+              <tr key={[year, monthIndex, week]}>
                 {
                   // Now can show the day
                   row.map((day, i) => 
                     <Day
+                      key={[year, monthIndex, day]}
                       numeric={day}
-                      isToday={this.isToday(year, index, day)}
-                      isWeekend={this.isWeekend(i)} />
+                      month={monthIndex}
+                      year={year}
+                      dayIndex={i} />
                   )
                 }
               </tr>
