@@ -6,10 +6,10 @@
 const rows = Array(6);
 const cols = Array(7);
 
-const getMatrix = (y, m) => {
+const getMatrix = (year, month) => {
   const matrix = [];
-  const date = new Date(y, m);
-  const numDays = new Date(y, m + 1, 0).getDate();
+  const date = new Date(year, month);
+  const numDays = new Date(year, month + 1, 0).getDate();
   let dayNum;
 
   for (let row = 0; row < rows.length; row++) {
@@ -20,7 +20,7 @@ const getMatrix = (y, m) => {
         dayNum = col - date.getDay() + 1;
         week.push(
           col < date.getDay()
-          ? -(new Date(y, m, -(date.getDay() - 1 - col)).getDate())
+          ? -(new Date(year, month, -(date.getDay() - 1 - col)).getDate())
           : dayNum
         );
       } else {

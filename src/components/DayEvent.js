@@ -36,7 +36,7 @@ class DayEvent extends Component {
       fullDate,
       event,
       onRemoveEvent,
-      onAddEvent
+      onAddEvent,
     } = this.props;
 
     return (
@@ -49,7 +49,7 @@ class DayEvent extends Component {
 
           <div className='Modal__Flex'>
             <h4 className='Modal__Title'>{fullDate}</h4>
-            <button className='Modal__Close' onClick={this.props.closeModal}>Close</button>
+            <button className='Modal__Close' onClick={closeModal}>Close</button>
           </div>
           {
             event
@@ -63,7 +63,7 @@ class DayEvent extends Component {
                 </button>
               </div>
             : <form className='Modal__Content Modal__Flex' onSubmit={ev => onAddEvent(ev, this.state.selectedCategory)}>
-                <select onChange={(ev) => this.onChangeCategory(ev)}>
+                <select onChange={ev => this.onChangeCategory(ev)}>
                   <option key='default'>Select one option</option>
                   {Object.keys(this.state.defaultCategories).map(ct => 
                     <option key={ct} value={ct}>{this.state.defaultCategories[ct]}</option>

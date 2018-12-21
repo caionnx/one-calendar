@@ -1,12 +1,14 @@
 export default (state = [], action) => {
   switch (action.type) {
     case 'ADD_EVENT':
+      const { id, date, name } = action;
+      
       return [
         ...state,
         {
-          id: action.id,
-          date: action.date,
-          name: action.name,
+          id: id,
+          date: date,
+          name: name,
         }
       ]
     case 'REMOVE_EVENT':
