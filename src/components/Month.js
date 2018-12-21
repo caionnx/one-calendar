@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import calendarMatrix from 'calendar-matrix';
+import { calendarMatrix } from '../utils';
 import WeekHead from './WeekHead';
 import Day from './Day';
 
