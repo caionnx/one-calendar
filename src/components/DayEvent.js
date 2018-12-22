@@ -50,7 +50,7 @@ class DayEvent extends Component {
           onRequestClose={closeModal}
           contentLabel={fullDate}>
 
-          <div className='Modal__Flex'>
+          <div className='Modal__Flex Modal__Header'>
             <h4 className='Modal__Title'>{fullDate}</h4>
             <button
               aria-label='Close modal'

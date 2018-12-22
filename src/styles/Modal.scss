@@ -15,19 +15,26 @@
   width: 250px;
 
   select {
-    border: 1px solid #333;
     background-color: white;
+    border-radius: 2px;
+    border: 1px solid #6b6b6b;
+    color: #333;
     outline: none;
+    padding: .1em .2em;
+  }
+
+  &__Header {
+    padding-bottom: 1.3em;
   }
 
   &__Title {
-    margin-top: 0;
+    margin: 0;
   }
 
   &__Flex {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
   }
 
   &__Content {
