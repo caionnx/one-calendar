@@ -110,8 +110,8 @@ class Day extends Component {
   }
 }
 
-const mapStateToProps = (state, props) => ({
-  event: state.find(ev => ev.date === getUID(props))
+const mapStateToProps = ({ events }, props) => ({
+  event: events.find(ev => ev.date === getUID(props))
 });
 
 export default connect(mapStateToProps)(Day);
