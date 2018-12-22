@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Modal from 'react-modal';
 
 import '../styles/Modal.scss';
+import '../styles/Button.scss';
 
 class DayEvent extends Component {
   constructor () {
@@ -51,17 +52,20 @@ class DayEvent extends Component {
 
           <div className='Modal__Flex'>
             <h4 className='Modal__Title'>{fullDate}</h4>
-            <button className='Modal__Close' onClick={closeModal}>Close</button>
+            <button
+              aria-label='Close modal'
+              className='Button Button--Unstyled Button--Large'
+              onClick={closeModal}>X</button>
           </div>
           {
             event
             ? <div className='Modal__Content Modal__Flex'>
                 {event.name}
-                <button onClick={() => {
+                <button className='Button Button--Delete' onClick={() => {
                   this.resetSelected();
                   onRemoveEvent(event.id);
                   }}>
-                  Delete
+                  Delete event
                 </button>
               </div>
             : <form className='Modal__Content Modal__Flex' onSubmit={ev => onAddEvent(ev, this.state.selectedCategory)}>
@@ -71,7 +75,7 @@ class DayEvent extends Component {
                     <option key={ct} value={ct}>{this.state.defaultCategories[ct]}</option>
                   )}
                 </select>
-                <button>Add</button>
+                <button className='Button'>Add event</button>
               </form>
           }
         </Modal>
