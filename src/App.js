@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './App.css';
+import './styles/App.scss';
 import Year from './components/Year';
 
 const App = () => (
