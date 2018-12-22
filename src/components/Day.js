@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import dateFormat from 'date-fns/format';
 import isToday from 'date-fns/is_today';
 import { connect } from 'react-redux'
+
 import { addEvent, removeEvent } from '../actions'
 import DayEvent from './DayEvent';
 
