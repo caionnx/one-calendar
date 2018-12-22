@@ -5,7 +5,7 @@ import Year from './components/Year';
 
 const App = () => (
   <div className="App">
-    <header className="App-header">
+    <header className="App__Header">
       <p>
         One calendar
       </p>
