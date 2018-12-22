@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import '../styles/Calendar.scss';
 import ErrorBoundary from './ErrorBoundary';
 import Month from './Month';
 
@@ -38,13 +39,13 @@ class Year extends Component {
     const { year, months } = this.state;
     
     return (
-      <div className='Year'>
-        <div className='Year__Header'>
+      <div className='Calendar'>
+        <div className='Calendar__Header'>
           <button title='Previous' onClick={() => this.onClickPreviousYear()}>{'<'}</button>
           <h1>{year}</h1>
           <button title='Next' onClick={() => this.onClickNextYear()}>{'>'}</button>
         </div>
-        <div className='Year__Content'>
+        <div className='Calendar__Content'>
           <ErrorBoundary fallbackUI={<h4>Something went wrong. Try again later.</h4>}>
             { months.map((month, monthIndex) => 
                 <Month key={month} name={month} index={monthIndex} year={year} />
