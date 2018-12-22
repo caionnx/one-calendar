@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Modal from 'react-modal';
 
+import '../styles/Modal.scss';
+
 class DayEvent extends Component {
   constructor () {
     super();
