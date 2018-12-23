@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## To Do List
+## To Do List ([on merge request](https://github.com/caionnx/one-calendar/pull/1))
 
 - Make unit test for all scripts
 - Improve performance
