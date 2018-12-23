@@ -1,0 +1,931 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`execute "remove event" prop function 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DayEvent
+    event={
+      Object {
+        "id": "test",
+        "name": "Test",
+      }
+    }
+    onRemoveEvent={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            "test",
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "appElement": null,
+      "ariaHideApp": true,
+      "bodyOpenClassName": "ReactModal__Body--open",
+      "children": Array [
+        <div
+          className="Modal__Flex Modal__Header"
+        >
+          <h4
+            className="Modal__Title"
+          />
+          <button
+            aria-label="Close modal"
+            className="Button Button--Unstyled Button--Large"
+          >
+            X
+          </button>
+        </div>,
+        <div
+          className="Modal__Content Modal__Flex"
+        >
+          Test
+          <button
+            className="Button Button--Delete"
+            onClick={[Function]}
+          >
+            Delete event
+          </button>
+        </div>,
+      ],
+      "className": "Modal",
+      "closeTimeoutMS": 0,
+      "contentLabel": undefined,
+      "isOpen": false,
+      "onRequestClose": undefined,
+      "parentSelector": [Function],
+      "portalClassName": "ReactModalPortal",
+      "role": "dialog",
+      "shouldCloseOnEsc": true,
+      "shouldCloseOnOverlayClick": true,
+      "shouldFocusAfterRender": true,
+      "shouldReturnFocusAfterClose": true,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h4
+              className="Modal__Title"
+            />,
+            <button
+              aria-label="Close modal"
+              className="Button Button--Unstyled Button--Large"
+            >
+              X
+            </button>,
+          ],
+          "className": "Modal__Flex Modal__Header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "Modal__Title",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "h4",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "aria-label": "Close modal",
+              "children": "X",
+              "className": "Button Button--Unstyled Button--Large",
+              "onClick": undefined,
+            },
+            "ref": null,
+            "rendered": "X",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Test",
+            <button
+              className="Button Button--Delete"
+              onClick={[Function]}
+            >
+              Delete event
+            </button>,
+          ],
+          "className": "Modal__Content Modal__Flex",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Test",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Delete event",
+              "className": "Button Button--Delete",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Delete event",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "appElement": null,
+        "ariaHideApp": true,
+        "bodyOpenClassName": "ReactModal__Body--open",
+        "children": Array [
+          <div
+            className="Modal__Flex Modal__Header"
+          >
+            <h4
+              className="Modal__Title"
+            />
+            <button
+              aria-label="Close modal"
+              className="Button Button--Unstyled Button--Large"
+            >
+              X
+            </button>
+          </div>,
+          <div
+            className="Modal__Content Modal__Flex"
+          >
+            Test
+            <button
+              className="Button Button--Delete"
+              onClick={[Function]}
+            >
+              Delete event
+            </button>
+          </div>,
+        ],
+        "className": "Modal",
+        "closeTimeoutMS": 0,
+        "contentLabel": undefined,
+        "isOpen": false,
+        "onRequestClose": undefined,
+        "parentSelector": [Function],
+        "portalClassName": "ReactModalPortal",
+        "role": "dialog",
+        "shouldCloseOnEsc": true,
+        "shouldCloseOnOverlayClick": true,
+        "shouldFocusAfterRender": true,
+        "shouldReturnFocusAfterClose": true,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h4
+                className="Modal__Title"
+              />,
+              <button
+                aria-label="Close modal"
+                className="Button Button--Unstyled Button--Large"
+              >
+                X
+              </button>,
+            ],
+            "className": "Modal__Flex Modal__Header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "Modal__Title",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-label": "Close modal",
+                "children": "X",
+                "className": "Button Button--Unstyled Button--Large",
+                "onClick": undefined,
+              },
+              "ref": null,
+              "rendered": "X",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Test",
+              <button
+                className="Button Button--Delete"
+                onClick={[Function]}
+              >
+                Delete event
+              </button>,
+            ],
+            "className": "Modal__Content Modal__Flex",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Test",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Delete event",
+                "className": "Button Button--Delete",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Delete event",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`render with modal component 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DayEvent />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "appElement": null,
+      "ariaHideApp": true,
+      "bodyOpenClassName": "ReactModal__Body--open",
+      "children": Array [
+        <div
+          className="Modal__Flex Modal__Header"
+        >
+          <h4
+            className="Modal__Title"
+          />
+          <button
+            aria-label="Close modal"
+            className="Button Button--Unstyled Button--Large"
+          >
+            X
+          </button>
+        </div>,
+        <form
+          className="Modal__Content Modal__Flex"
+          onSubmit={[Function]}
+        >
+          <select
+            onChange={[Function]}
+          >
+            <option>
+              Select one option
+            </option>
+            <option
+              value="holiday"
+            >
+              Holiday
+            </option>
+            <option
+              value="birthday"
+            >
+              Birthday
+            </option>
+            <option
+              value="busy"
+            >
+              Busy
+            </option>
+            <option
+              value="anniversary"
+            >
+              Anniversary
+            </option>
+          </select>
+          <button
+            className="Button"
+          >
+            Add event
+          </button>
+        </form>,
+      ],
+      "className": "Modal",
+      "closeTimeoutMS": 0,
+      "contentLabel": undefined,
+      "isOpen": false,
+      "onRequestClose": undefined,
+      "parentSelector": [Function],
+      "portalClassName": "ReactModalPortal",
+      "role": "dialog",
+      "shouldCloseOnEsc": true,
+      "shouldCloseOnOverlayClick": true,
+      "shouldFocusAfterRender": true,
+      "shouldReturnFocusAfterClose": true,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h4
+              className="Modal__Title"
+            />,
+            <button
+              aria-label="Close modal"
+              className="Button Button--Unstyled Button--Large"
+            >
+              X
+            </button>,
+          ],
+          "className": "Modal__Flex Modal__Header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "Modal__Title",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "h4",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "aria-label": "Close modal",
+              "children": "X",
+              "className": "Button Button--Unstyled Button--Large",
+              "onClick": undefined,
+            },
+            "ref": null,
+            "rendered": "X",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <select
+              onChange={[Function]}
+            >
+              <option>
+                Select one option
+              </option>
+              <option
+                value="holiday"
+              >
+                Holiday
+              </option>
+              <option
+                value="birthday"
+              >
+                Birthday
+              </option>
+              <option
+                value="busy"
+              >
+                Busy
+              </option>
+              <option
+                value="anniversary"
+              >
+                Anniversary
+              </option>
+            </select>,
+            <button
+              className="Button"
+            >
+              Add event
+            </button>,
+          ],
+          "className": "Modal__Content Modal__Flex",
+          "onSubmit": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <option>
+                  Select one option
+                </option>,
+                Array [
+                  <option
+                    value="holiday"
+                  >
+                    Holiday
+                  </option>,
+                  <option
+                    value="birthday"
+                  >
+                    Birthday
+                  </option>,
+                  <option
+                    value="busy"
+                  >
+                    Busy
+                  </option>,
+                  <option
+                    value="anniversary"
+                  >
+                    Anniversary
+                  </option>,
+                ],
+              ],
+              "onChange": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "default",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Select one option",
+                },
+                "ref": null,
+                "rendered": "Select one option",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "holiday",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Holiday",
+                  "value": "holiday",
+                },
+                "ref": null,
+                "rendered": "Holiday",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "birthday",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Birthday",
+                  "value": "birthday",
+                },
+                "ref": null,
+                "rendered": "Birthday",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "busy",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Busy",
+                  "value": "busy",
+                },
+                "ref": null,
+                "rendered": "Busy",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": "anniversary",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Anniversary",
+                  "value": "anniversary",
+                },
+                "ref": null,
+                "rendered": "Anniversary",
+                "type": "option",
+              },
+            ],
+            "type": "select",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Add event",
+              "className": "Button",
+            },
+            "ref": null,
+            "rendered": "Add event",
+            "type": "button",
+          },
+        ],
+        "type": "form",
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "appElement": null,
+        "ariaHideApp": true,
+        "bodyOpenClassName": "ReactModal__Body--open",
+        "children": Array [
+          <div
+            className="Modal__Flex Modal__Header"
+          >
+            <h4
+              className="Modal__Title"
+            />
+            <button
+              aria-label="Close modal"
+              className="Button Button--Unstyled Button--Large"
+            >
+              X
+            </button>
+          </div>,
+          <form
+            className="Modal__Content Modal__Flex"
+            onSubmit={[Function]}
+          >
+            <select
+              onChange={[Function]}
+            >
+              <option>
+                Select one option
+              </option>
+              <option
+                value="holiday"
+              >
+                Holiday
+              </option>
+              <option
+                value="birthday"
+              >
+                Birthday
+              </option>
+              <option
+                value="busy"
+              >
+                Busy
+              </option>
+              <option
+                value="anniversary"
+              >
+                Anniversary
+              </option>
+            </select>
+            <button
+              className="Button"
+            >
+              Add event
+            </button>
+          </form>,
+        ],
+        "className": "Modal",
+        "closeTimeoutMS": 0,
+        "contentLabel": undefined,
+        "isOpen": false,
+        "onRequestClose": undefined,
+        "parentSelector": [Function],
+        "portalClassName": "ReactModalPortal",
+        "role": "dialog",
+        "shouldCloseOnEsc": true,
+        "shouldCloseOnOverlayClick": true,
+        "shouldFocusAfterRender": true,
+        "shouldReturnFocusAfterClose": true,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h4
+                className="Modal__Title"
+              />,
+              <button
+                aria-label="Close modal"
+                className="Button Button--Unstyled Button--Large"
+              >
+                X
+              </button>,
+            ],
+            "className": "Modal__Flex Modal__Header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "Modal__Title",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-label": "Close modal",
+                "children": "X",
+                "className": "Button Button--Unstyled Button--Large",
+                "onClick": undefined,
+              },
+              "ref": null,
+              "rendered": "X",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <select
+                onChange={[Function]}
+              >
+                <option>
+                  Select one option
+                </option>
+                <option
+                  value="holiday"
+                >
+                  Holiday
+                </option>
+                <option
+                  value="birthday"
+                >
+                  Birthday
+                </option>
+                <option
+                  value="busy"
+                >
+                  Busy
+                </option>
+                <option
+                  value="anniversary"
+                >
+                  Anniversary
+                </option>
+              </select>,
+              <button
+                className="Button"
+              >
+                Add event
+              </button>,
+            ],
+            "className": "Modal__Content Modal__Flex",
+            "onSubmit": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <option>
+                    Select one option
+                  </option>,
+                  Array [
+                    <option
+                      value="holiday"
+                    >
+                      Holiday
+                    </option>,
+                    <option
+                      value="birthday"
+                    >
+                      Birthday
+                    </option>,
+                    <option
+                      value="busy"
+                    >
+                      Busy
+                    </option>,
+                    <option
+                      value="anniversary"
+                    >
+                      Anniversary
+                    </option>,
+                  ],
+                ],
+                "onChange": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "default",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Select one option",
+                  },
+                  "ref": null,
+                  "rendered": "Select one option",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "holiday",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Holiday",
+                    "value": "holiday",
+                  },
+                  "ref": null,
+                  "rendered": "Holiday",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "birthday",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Birthday",
+                    "value": "birthday",
+                  },
+                  "ref": null,
+                  "rendered": "Birthday",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "busy",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Busy",
+                    "value": "busy",
+                  },
+                  "ref": null,
+                  "rendered": "Busy",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": "anniversary",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Anniversary",
+                    "value": "anniversary",
+                  },
+                  "ref": null,
+                  "rendered": "Anniversary",
+                  "type": "option",
+                },
+              ],
+              "type": "select",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Add event",
+                "className": "Button",
+              },
+              "ref": null,
+              "rendered": "Add event",
+              "type": "button",
+            },
+          ],
+          "type": "form",
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
