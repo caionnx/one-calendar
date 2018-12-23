@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render day correctly (with DayEvent) 1`] = `
+<td>
+  <div
+    className="Day"
+    key="15"
+    onClick={[Function]}
+  >
+    15
+  </div>
+  <DayEvent
+    closeModal={[Function]}
+    fullDate="15 Dec 2018"
+    key="15 Dec 2018"
+    modalIsOpen={true}
+    onAddEvent={[Function]}
+    onRemoveEvent={[Function]}
+  />
+</td>
+`;

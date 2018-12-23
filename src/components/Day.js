@@ -9,7 +9,7 @@ import DayEvent from './DayEvent';
 const getUID = ({ numeric, month, year } = {}) =>
   `${numeric}${month}${year}`;
 
-class Day extends Component {
+export class Day extends Component {
   constructor () {
     super();
 
