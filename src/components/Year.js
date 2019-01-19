@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import '../styles/Calendar.scss';
+import ErrorBoundary from './ErrorBoundary';
 import Month from './Month';
 
 class Year extends Component {
@@ -33,18 +36,22 @@ class Year extends Component {
   }
 
   render () {
+    const { year, months } = this.state;
+    
     return (
-      <div className='Year'>
-        <div className='Year__Header'>
+      <div className='Calendar'>
+        <div className='Calendar__Header'>
           <button title='Previous' onClick={() => this.onClickPreviousYear()}>{'<'}</button>
-          <h1>{this.state.year}</h1>
+          <h1>{year}</h1>
           <button title='Next' onClick={() => this.onClickNextYear()}>{'>'}</button>
         </div>
-        <div className='Year__Content'>
-          { this.state.months.map((m, i) => 
-              <Month key={m} name={m} index={i} year={this.state.year} />
-            )
-          }
+        <div className='Calendar__Content'>
+          <ErrorBoundary fallbackUI={<h4>Something went wrong. Try again later.</h4>}>
+            { months.map((month, monthIndex) => 
+                <Month key={month} name={month} index={monthIndex} year={year} />
+              )
+            }
+          </ErrorBoundary>
         </div>
       </div>
     );

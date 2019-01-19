@@ -8,7 +8,7 @@ const mockStore = configureMockStore();
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  const store = mockStore([]);
+  const store = mockStore({ events: [] });
 
   ReactDOM.render(
     <Provider store={store}>

@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import dateFormat from 'date-fns/format';
 import isToday from 'date-fns/is_today';
 import { connect } from 'react-redux'
+
 import { addEvent, removeEvent } from '../actions'
 import DayEvent from './DayEvent';
 
 const getUID = ({ numeric, month, year } = {}) =>
   `${numeric}${month}${year}`;
 
-class Day extends Component {
+export class Day extends Component {
   constructor () {
     super();
 
@@ -110,8 +111,8 @@ class Day extends Component {
   }
 }
 
-const mapStateToProps = (state, props) => ({
-  event: state.find(ev => ev.date === getUID(props))
+const mapStateToProps = ({ events }, props) => ({
+  event: events.find(ev => ev.date === getUID(props))
 });
 
 export default connect(mapStateToProps)(Day);

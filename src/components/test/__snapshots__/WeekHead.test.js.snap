@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render WeekHead correctly 1`] = `
+<tr
+  className="WeekHead"
+>
+  <th>
+    Su
+  </th>
+  <th>
+    M
+  </th>
+  <th>
+    Tu
+  </th>
+  <th>
+    W
+  </th>
+  <th>
+    Th
+  </th>
+  <th>
+    F
+  </th>
+  <th>
+    Sa
+  </th>
+</tr>
+`;

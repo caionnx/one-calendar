@@ -1,10 +1,11 @@
 import React from 'react';
-import './App.css';
+
+import './styles/App.scss';
 import Year from './components/Year';
 
 const App = () => (
   <div className="App">
-    <header className="App-header">
+    <header className="App__Header">
       <p>
         One calendar
       </p>

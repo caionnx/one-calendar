@@ -1,0 +1,24 @@
+.Button {
+  background-color: #498fce;
+  border-radius: 2px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  padding: .3em .5em;
+
+  &--Delete {
+    background-color: tomato;
+  }
+
+  &--Unstyled {
+    background-color: inherit;
+    color: inherit;
+    padding: 0;
+  }
+
+  &--Large {
+    font-size: 1em;
+  }
+}

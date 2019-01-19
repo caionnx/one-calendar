@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import calendarMatrix from 'calendar-matrix';
+
+import { calendarMatrix } from '../utils';
 import WeekHead from './WeekHead';
 import Day from './Day';
 
@@ -26,17 +27,17 @@ class Month extends Component {
         <tbody>
           {
             // Get a matrix for the month, each line is a week
-            this.getMatrixOfDays(year, monthIndex).map((row, week) => 
-              <tr key={[year, monthIndex, week]}>
+            this.getMatrixOfDays(year, monthIndex).map((week, weekIndex) => 
+              <tr key={[year, monthIndex, weekIndex]}>
                 {
                   // Now can show the day
-                  row.map((day, i) => 
+                  week.map((day, dayIndex) => 
                     <Day
                       key={[year, monthIndex, day]}
                       numeric={day}
                       month={monthIndex}
                       year={year}
-                      dayIndex={i} />
+                      dayIndex={dayIndex} />
                   )
                 }
               </tr>

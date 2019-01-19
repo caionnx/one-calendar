@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import Modal from 'react-modal';
 
+import '../styles/Modal.scss';
+import '../styles/Button.scss';
+
 class DayEvent extends Component {
   constructor () {
     super();
@@ -36,7 +39,7 @@ class DayEvent extends Component {
       fullDate,
       event,
       onRemoveEvent,
-      onAddEvent
+      onAddEvent,
     } = this.props;
 
     return (
@@ -47,29 +50,32 @@ class DayEvent extends Component {
           onRequestClose={closeModal}
           contentLabel={fullDate}>
 
-          <div className='Modal__Flex'>
+          <div className='Modal__Flex Modal__Header'>
             <h4 className='Modal__Title'>{fullDate}</h4>
-            <button className='Modal__Close' onClick={this.props.closeModal}>Close</button>
+            <button
+              aria-label='Close modal'
+              className='Button Button--Unstyled Button--Large'
+              onClick={closeModal}>X</button>
           </div>
           {
             event
             ? <div className='Modal__Content Modal__Flex'>
                 {event.name}
-                <button onClick={() => {
+                <button className='Button Button--Delete' onClick={() => {
                   this.resetSelected();
                   onRemoveEvent(event.id);
                   }}>
-                  Delete
+                  Delete event
                 </button>
               </div>
             : <form className='Modal__Content Modal__Flex' onSubmit={ev => onAddEvent(ev, this.state.selectedCategory)}>
-                <select onChange={(ev) => this.onChangeCategory(ev)}>
+                <select onChange={ev => this.onChangeCategory(ev)}>
                   <option key='default'>Select one option</option>
                   {Object.keys(this.state.defaultCategories).map(ct => 
                     <option key={ct} value={ct}>{this.state.defaultCategories[ct]}</option>
                   )}
                 </select>
-                <button>Add</button>
+                <button className='Button'>Add event</button>
               </form>
           }
         </Modal>
